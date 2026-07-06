@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="images/images.png" type="image/png">
-<title>Deep RL for Vision-Based
-UAV–AGV Tracking</title>
+<title>Eyes on the Sky: Deep Reinforcement Learning for Vision-Based UAV
+Tracking by an Autonomous Ground Vehicle</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -87,7 +87,7 @@ header{
     margin:4px 0;
 }
 
-.hero p{
+.hero > p{
     display:none;
 }
 .hero-actions{
@@ -128,6 +128,7 @@ header{
     max-height:60vh;
     display:block;
     object-fit:contain;
+    object-position:center;
 }
 
 .slide-btn{
@@ -207,11 +208,11 @@ h2{text-align:center;margin-bottom:30px;font-size:2rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
 .card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 5px 15px rgba(0,0,0,.12);transition:.3s}
 .card:hover{transform:translateY(-8px)}
-.overview-content{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;max-width:1080px;margin:0 auto;}
-.overview-text{flex:1 1 360px;min-width:320px;color:#334155;font-size:1rem;line-height:1.75;}
+.overview-content{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;max-width:1200px;margin:0 auto;}
+.overview-text{flex:1 1 360px;min-width:300px;color:#334155;font-size:1rem;line-height:1.75;}
 .overview-text p{margin-bottom:16px;}
-.overview-image{flex:1 1 380px;min-width:320px;}
-.overview-image img{width:100%;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);display:block;}
+.overview-image{flex:1.4 1 420px;min-width:320px;display:flex;align-items:center;justify-content:center}
+.overview-image img{width:100%;max-width:640px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);display:block;}
 .pipeline{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
 .step{background:#2b6cff;color:#fff;padding:20px;border-radius:12px;min-width:180px;text-align:center}
 .training-overview{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:30px;max-width:1080px;margin:0 auto;}
@@ -239,16 +240,17 @@ iframe{width:100%;height:500px;border:none;border-radius:12px}
 <nav>
 <div class="brand"><b>RL Vision Based Tracking</b></div>
 <div>
-<a href="#about"></a><a href="#abstract">Abstract</a><a href="#pipeline">Pipeline</a><a href="#gallery">Training</a><a href="#results">Results</a><a href="#downloads">Downloads</a>
+<a href="#about"></a><a href="#abstract">Abstract</a><a href="#pipeline">Pipeline</a><a href="#gallery">Training</a><a href="#results">Results</a>
 </div>
 </nav>
 <header>
 <div class="hero reveal active">
 <img class="hero-logo" src="images/images.png" alt="AerialVision logo">
-<h1>Deep Reinforcement Learning<br>for Vision-Based UAV–AGV Tracking</h1>
+<h1>Eyes on the Sky: Deep Reinforcement Learning for Vision-Based UAV
+Tracking by an Autonomous Ground Vehicle</h1>
 <div class="author-block">
-<p>Karan Raj Pant¹, Jagannath Prasad Sahoo¹, Sreekar Mallela, Amit Shukla²</p>
-<p>¹ Indian Institute of Technology Mandi, India</p>
+<p>Karan Raj Pant, Jagannath Prasad Sahoo, Sreekar Mallela, Surya Prakash S.K. and Amit Shukla</p>
+<p> Indian Institute of Technology Mandi, India</p>
 </div>
 <div class="hero-actions">
 <a class="btn" href="#">Paper</a>
@@ -264,7 +266,10 @@ iframe{width:100%;height:500px;border:none;border-radius:12px}
 <div class="slideshow">
     <button class="slide-btn prev" id="prevSlide">&#8249;</button>
     <div class="slide active">
-        <img src="slide/AGV_FOV.png" alt="Project slide image">
+        <img src="slide/UAV%20(608%20x%201080%20px).png" alt="UAV AGV tracking slide">
+    </div>
+    <div class="slide">
+        <img src="slide/yolo.jpeg" alt="YOLO detection slide">
     </div>
     <button class="slide-btn next" id="nextSlide">&#8250;</button>
 </div>
@@ -304,7 +309,7 @@ tracking.</p>
         <p>Dataset and code resources will be made available once the work is published.</p>
     </div>
     <div class="overview-image">
-        <img src="images/Architecture.png" alt="Design overview diagram">
+        <img src="images/Video Stream (Downlink) (3).png" alt="Design overview diagram">
     </div>
 </div>
 </section>
@@ -313,7 +318,7 @@ tracking.</p>
 <h2>Training Parameters</h2>
 <div class="training-overview">
   <div class="training-image">
-    <img src="images/Training_Parameters.png" alt="Training parameters image">
+    <img src="images/Training_Progrss.png" alt="Training parameters image">
   </div>
   <div class="training-text">
     <p>The training setup for our RL vision-based UAV–AGV tracking uses image-based observations and reward-driven policy optimization to learn robust control behavior. The system is trained to minimize haloed distance error while following circular and square trajectories in the AGV reference frame.</p>
@@ -403,33 +408,13 @@ tracking.</p>
 
 <section id="demo" class="reveal">
 <h2>Demo Video</h2>
-<div class="video-grid">
-<video controls muted playsinline src="../../../circle.mp4"></video>
-<video controls muted playsinline src="../../../circle%20square%20annotated.mp4"></video>
-<video controls muted playsinline src="../../../circle%20square.mp4"></video>
-<video controls muted playsinline src="../../../Documents/new_agv_uav/DJI_0237.MP4"></video>
-<video controls muted playsinline src="../../../Documents/new_agv_uav/DJI_0238.MP4"></video>
-<video controls muted playsinline src="../../../Downloads/test_video.mp4"></video>
-<video controls muted playsinline src="../../../Downloads/vid_1.mp4"></video>
-<video controls muted playsinline src="../../../Downloads/vid_2.mp4"></video>
-<video controls muted playsinline src="../../../drone_raw/for_testing/vid_12.mp4"></video>
-<video controls muted playsinline src="../../../drone_raw/for_testing/vid_1.mp4"></video>
-<video controls muted playsinline src="../../../drone_raw/for_testing/vid_2.mp4"></video>
-<video controls muted playsinline src="../../../output2.mp4"></video>
-<video controls muted playsinline src="../../../output.mp4"></video>
-<video controls muted playsinline src="../../../Untitled%20Project.mp4"></video>
-<video controls muted playsinline src="../../../Videos/DJI_0470.MP4"></video>
-<video controls muted playsinline src="../../../Videos/Screencast%20from%2006-26-2026%2003%3A19%3A11%20PM.webm"></video>
+<div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
+    <video controls muted playsinline src="videos/circle_comparison_h264.mp4"></video>
+    <video controls muted playsinline src="videos/square_comparison_h264.mp4"></video>
 </div>
 </section>
 
-<section id="downloads" class="downloads reveal">
-<h2>Downloads</h2>
-<a href="#">Paper PDF</a>
-<a href="#">GitHub</a>
-<a href="#">Dataset</a>
-<a href="#">Pretrained Model</a>
-</section>
+
 
 
 <footer>
