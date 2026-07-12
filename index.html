@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="images/images.png" type="image/png">
-<title>Eyes on the Sky: Deep Reinforcement Learning for Vision-Based UAV
+<title>Deep Reinforcement Learning for Vision-Based UAV
 Tracking by an Autonomous Ground Vehicle</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -188,6 +188,14 @@ header{
     background:#d1d5db;
     box-shadow:0 16px 35px rgba(0,0,0,.1);
 }
+.btn.disabled{
+    pointer-events:none;
+    opacity:.55;
+    background:#f3f4f6;
+    color:#6b7280;
+    cursor:not-allowed;
+    box-shadow:none;
+}
 section{padding:90px 8%;background:#fff}
 section:nth-child(even){background:#eef3ff}
 #abstract p{max-width:900px;margin:0 auto;text-align:center;}
@@ -250,7 +258,7 @@ iframe{width:100%;height:500px;border:none;border-radius:12px}
 <header>
 <div class="hero reveal active">
 <img class="hero-logo" src="images/images.png" alt="AerialVision logo">
-<h1>Eyes on the Sky: Deep Reinforcement Learning for Vision-Based UAV
+<h1>Deep Reinforcement Learning for Vision-Based UAV
 Tracking by an Autonomous Ground Vehicle</h1>
 <div class="author-block">
 <p>Karan Raj Pant, Jagannath Prasad Sahoo, Sreekar Mallela, Surya Prakash S.K. and Amit Shukla</p>
@@ -260,14 +268,14 @@ Tracking by an Autonomous Ground Vehicle</h1>
 <a class="btn" href="#">Paper</a>
 <a class="btn" href="#">Code</a>
 <a class="btn" href="#">Dataset</a>
-<a class="btn" href="#">Demo</a>
+<a class="btn" href="#demo">Demo</a>
 </div>
-<div class="hero-note">Dataset available once published</div>
+<div class="hero-note">Paper, Code, Dataset available once published</div>
 </div>
 </header>
 
 <section id="about" class="reveal">
-<h2>About</h2>
+<h2>Gallery</h2>
 <div class="slideshow">
     <button class="slide-btn prev" id="prevSlide">&#8249;</button>
     <div class="slide active">
@@ -412,10 +420,13 @@ tracking.</p>
 
 
 <section id="demo" class="reveal">
-<h2>Demo Video</h2>
+<h2>Video</h2>
 <div class="demo-container">
-    <video class="demo-video" controls playsinline poster="images/images.png" src="videos/circle_comparison_h264.mp4"></video>
-    <video class="demo-video" controls playsinline poster="images/images.png" src="videos/square_comparison_h264.mp4"></video>
+    <video class="demo-video" controls playsinline preload="metadata" poster="images/images.png">
+        <source src="videos/Final_video.mp4" type="video/mp4">
+        
+    </video>
+ 
 </div>
 </section>
 
